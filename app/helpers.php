@@ -111,5 +111,12 @@ function valueNumberFormate($amount){
     $result = explode('.',number_format($amount,2));
     return $result;
 }
+function findCompanyName($id){
+    $query = DB::table('tbl_companies')->where('id',$id)->first();
+    return $query->company_name; 
+}
+function arrayToEncode($data){
+    return json_encode($data);
+}
 
 ?>

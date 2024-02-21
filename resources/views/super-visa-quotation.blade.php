@@ -36,13 +36,14 @@
               <option value="500" {{ $superVisaCouple1['detectible_amount']== 500 ? 'selected' : '' }}>500</option>
               <option value="1000" {{ $superVisaCouple1['detectible_amount'] == 1000 ? 'selected' : '' }}>1000</option>
               <option value="2500" {{ $superVisaCouple1['detectible_amount'] == 2500 ? 'selected' : '' }}>2500</option>
+              <option value="3000" {{ $superVisaCouple1['detectible_amount'] == 3000 ? 'selected' : '' }}>3000</option>
               <option value="5000" {{ $superVisaCouple1['detectible_amount'] == 5000 ? 'selected' : '' }}>5000</option>
               <option value="10000" {{ $superVisaCouple1['detectible_amount'] == 10000 ? 'selected' : '' }}>10000</option>
               </select>
             </div>
           </div>
           <div class="form-field-row">
-            <div class="coverage"> <span>Coverage List 1</span>
+            <div class="coverage"> <span class="pnkBg">Coverage 1st</span>
               <select class="form-control  super-couple-coverage-amt1" name="coverage_amt1">
                 <option value="100000" {{$superVisaCouple1['super_visa_couple_coverage1']==100000 ? 'selected' : ''}}>100,000</option>
                 <option value="150000" {{$superVisaCouple1['super_visa_couple_coverage1']==150000 ? 'selected' : ''}}>150,000</option>
@@ -55,7 +56,7 @@
             </div>
           </div>
           <div class="form-field-row">
-            <div class="coverage"> <span>Coverage List 2</span>
+            <div class="coverage"> <span class="LightYellowBg">Coverage 2nd</span>
               <select class="form-control  super-couple-coverage-amt2" name="coverage_amt2">
                 <option value="100000" {{$superVisaCouple2['super_visa_couple_coverage2']==100000 ? 'selected' : ''}}>100,000</option>
                 <option value="150000" {{$superVisaCouple2['super_visa_couple_coverage2']==150000 ? 'selected' : ''}}>150,000</option>
@@ -68,6 +69,8 @@
             </div>
           </div>
           <h6>Would you like to cover pre-existing medical conditions?</h6>
+          
+           <span class="number1">1</span>
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="not_exit1" name="super_couple_exit1" class="custom-control-input " value="0" {{$superVisaCouple1['super_visa_couple_exit1']==0 ? 'checked' : ''}}>
             <label class="custom-control-label" for="not_exit1">No</label>
@@ -75,7 +78,11 @@
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="exit1" name="super_couple_exit1" class="custom-control-input" value="1" {{$superVisaCouple1['super_visa_couple_exit1']==1 ? 'checked' : ''}}>
             <label class="custom-control-label" for="exit1">Yes</label>
-          </div></br>
+          </div>
+          </br>
+          
+          
+          <span class="number22">2</span>
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="not_exit2" name="super_couple_exit2" class="custom-control-input" value="0" {{$superVisaCouple2['super_visa_couple_exit2']==0 ? 'checked' : ''}}>
             <label class="custom-control-label" for="not_exit2">No</label>
@@ -133,7 +140,9 @@
               <h3><span>Deductible <strong>{{number_format($package['detectible'])}}  </strong> {{policyType($package['c_id'])}} 
             </span></h3>
             </div>
-            <div class="btn-section"> <a target="_blank" href="{{ url('super-visa-couple-plan-buyer?' . 
+            <div class="btn-section"> 
+            <button class="btn btn-primary super_visa_couple_compare_data" id="super_visa_couple_compare_btn_{{$button_id}}" style="display:none;">Compare</button>
+            <a target="_blank" href="{{ url('super-visa-couple-plan-buyer?' . 
                 'visa_type=' . request('visa_type') . '&' . 
                 'super_visa_couple_birth1=' . request('super_visa_couple_birth1') . '&' . 
                 'super_visa_couple_age1=' . request('super_visa_couple_age1') . '&' . 
@@ -151,13 +160,13 @@
                 'super_visa_couple_exit1=' . request('super_visa_couple_exit1') . '&' . 
                 'super_visa_couple_exit2=' . request('super_visa_couple_exit2') . '&' . 
                 'buyer_id=' . $button_id
-            ) }}" class="buy-now">BUY NOW</a> 
-            <a href="#" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails_{{$button_id}}()">PLAN DETAILS</a>
+            ) }}" class="buy-now">Buy Now</a> 
+            <a href="javascript:void(0)" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails_{{$button_id}}()">Plan Details</a>
               <div class="compaire">
                 <div class="left">
                   <input type="checkbox" class="form-check-input super_visa_couple_compare" id="super_visa_couple_compare" value="{{$button_id}}">
                   <label class="form-check-label" for="super_visa_couple_compare">Compare</label>
-                  <button class="btn btn-primary super_visa_couple_compare_data" id="super_visa_couple_compare_btn_{{$button_id}}" style="display:none;">COMPARE</button>
+                  
 
                 </div>
                 <div class="right"> <a target="_blank" href="{{ url('super-visa-couple-plan-buyer?' . 

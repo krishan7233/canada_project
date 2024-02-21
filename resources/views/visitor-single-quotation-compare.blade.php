@@ -47,19 +47,19 @@
   
 </style>
 <div class="compare-table">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-10 m-auto">
+			<div class="col-lg-12 m-auto">
 			<div class="backhome">
 				<a href="#"><i class="fa fa-arrow-left"></i> BACK TO HOME</a>
 			</div>
       <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="row">
                 <div class="col-sm-12 border_div1"  ></div>
                 <div class="col-sm-12 border_div2" ></div>
                 <div class="col-sm-12 border_div3"></div>
-                <div class="col-sm-12 border_div4 text_position" >Covid-19	</div>
+                <div class="col-sm-12 border_div4 text_position" >Covid-19 	</div>
                 <div class="col-sm-12 border_div4 text_position" >Ambulance	</div>
                 <div class="col-sm-12 border_div4 text_position" >Deductible (Per Claim or Per Policy)	</div>
                 <div class="col-sm-12 border_div4 text_position" >$2500 Disappearing Deductible</div>
@@ -107,7 +107,7 @@
             <?php 
             $compare_data = companyDetail($compare['c_id']);
             ?>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
               <div class="row">
                 <div class="col-sm-12 border_div5" >
                   <img src="{{companyPhoto($compare['c_id'])}}" class="img-fluid" alt="">
@@ -255,7 +255,7 @@
 		</div>
 	</div>
 </div>
-
+</div>
 
 
 

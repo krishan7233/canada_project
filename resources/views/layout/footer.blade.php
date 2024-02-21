@@ -12,11 +12,13 @@
                   </ul>
                </div>
                <div class="col-lg-3 col-md-3 col-sm-6 footer-sec">
-                  <h5>Travel Insurance </h5>
+                  <h5>Insurance </h5>
                   <ul>
-                     <li><a href="#">Super Visa Insurance</a></li>
-                     <li><a href="#">Visitor To Canada Insurance</a></li>
+                     <li><a href="{{ route('super-visa') }}">Super Visa Insurance</a></li>
+                     <li><a href="{{ route('visitor-visa-insurance') }}">Visitor To Canada Insurance</a></li>
                      <li><a href="#">Canadian Travelling Out of Country / Province</a></li>
+                      <li><a href="#">Home and Auto Insurance</a></li>
+                       <li><a href="#">Commercial Insurance</a></li>
                   </ul>
                </div>
                <div class="col-lg-2 col-md-2 col-sm-6 footer-sec">
@@ -25,6 +27,7 @@
                      <li><a href="#">RESP</a></li>
                      <li><a href="#">RRSP</a></li>
                      <li><a href="#">TFSA</a></li>
+                     <li><a href="#">FHSA</a> </li>
                   </ul>
                </div>
                <div class="col-lg-4 col-md-4 col-sm-6 footer-sec">
@@ -39,7 +42,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-xl-9 col-lg-9 col-md-6">
-                 <p>Copyright © 2023. All rights reserved by PolicyMarket. | <a href="{{ route('privacy-policy') }}">Privacy Policy</a> | <a href="{{ route('terms-and-conditions') }}">Terms and Conditions</a></p>
+                 <p>Copyright © 2023. All rights reserved by Policy Market. | <a href="{{ route('privacy-policy') }}">Privacy Policy</a> | <a href="{{ route('terms-and-conditions') }}">Terms and Conditions</a></p>
                   </div>
                   
                   <div class="col-xl-3 col-lg-3 col-md-6">
@@ -62,12 +65,12 @@
 <div id="cookies-popup" class="cookies-popup">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-10">
+					<div class="col-lg-9">
 						<div class="popup-content">
 							<p>We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept”, you consent to the use of ALL the cookies.</p>
 						</div>
 				  </div>
-					<div class="col-lg-2 text-right">
+					<div class="col-lg-3 text-right">
 					<a href="#" data-toggle="modal" data-target="#cookieModalCenter">Cookie Settings</a>
 						<button id="accept-cookies">Accept</button>
 						
@@ -99,6 +102,30 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+<!--Cookies read more start-->
+
+<script>
+	$(document).ready(function() {
+  $("#cookies-toggle").click(function() {
+    var elem = $("#cookies-toggle").text();
+    if (elem == "Read More") {
+      //Stuff to do when btn is in the read more state
+      $("#cookies-toggle").text("Read Less");
+      $("#cookies-text").slideDown();
+    } else {
+      //Stuff to do when btn is in the read less state
+      $("#cookies-toggle").text("Read More");
+      $("#cookies-text").slideUp();
+    }
+  });
+});
+</script>
+
+<!--Cookies read more End-->
 
 
 
@@ -507,7 +534,7 @@ $("#singledob").datepicker({ dateFormat:'dd/mm/yy'});
         }, {
             breakpoint: 520,
             settings: {
-                slidesToShow: 3
+                slidesToShow: 2
             }
         }]
     });
@@ -845,28 +872,73 @@ $(".formsubmit2").submit(function(event) {
       
 </script>
 
-<div class="modal fade" id="cookieModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookieModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal fade cookies-model" id="cookieModalCenter" tabindex="-1" role="dialog" aria-labelledby="cookieModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="cookieModalCenterTitle">Modal title</h5>
+        <h5 class="modal-title" id="cookieModalCenterTitle">Privacy Overview</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       dd
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="accept-cookies">Save & Accept</button>
-      </div>
-    </div>
-  </div>
+		<p>This website uses cookies to improve your experience while you navigate through the website. Out of these cookies, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. </p>
+        
+<span id="cookies-text">
+<p>We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may have an effect on your browsing experience.</p>
+</span>
+        
+<div class="btn-container">
+<button id="cookies-toggle">Read More</button>
 </div>
 
 
+<div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2>
+                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo"> Necessary </button>
+                <span class="Enable">Always Enabled</span>
+              </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.</p></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2>
+                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Non-necessary </button>
+                    <!-- Default checked -->
+<div class="custom-control custom-switch Enable">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+  <label class="custom-control-label" for="customSwitch1">Enabled</label>
+</div>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.</p>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+        </div>
 
+       
+       <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary" id="accept-cookies">Save & Accept</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
 <!--Cookie Popup End-->
+
+
+
 
 </body>
 </html>

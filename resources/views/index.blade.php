@@ -20,29 +20,32 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active"> 
-			<img src="assets/images/banner-1.png" alt="..."> 
+			<img src="assets/images/banner-1.png" alt="..." class="desk-slide"> 
+            <img src="assets/images/banner-1-mob.png" alt="..." class="mob-slide">
 			<div class="carousel-caption">
 				<div class="hero-text">
 				  <h1 class="text-pink">Compare in Seconds, Save for a Lifetime,<span>Buy with Confidence</span></h1>
-				  <button type="Submit" class="btn btn-prim-round">Get a Quote</button>
+				  <button type="Submit" onclick="location.href='{{ route('services') }}'" class="btn btn-prim-round">Get a Quote</button>
 				</div>
 		  </div>
 			</div>
             <div class="carousel-item"> 
-			<img src="assets/images/banner-2.png" alt="..."> 
+			<img src="assets/images/banner-2.png" alt="..." class="desk-slide"> 
+            <img src="assets/images/banner-2-mob.png" alt="..." class="mob-slide">
 			<div class="carousel-caption">
 				<div class="hero-text">
 				  <h1 class="text-pink">Insure Your Peace of Mind  <span>with PolicyMarket</span></h1>
-				  <button type="Submit" class="btn btn-prim-round">Get a Quote</button>
+				  <button type="Submit" onclick="location.href='{{ route('services') }}'"  class="btn btn-prim-round">Get a Quote</button>
 				</div>
 		  </div>
 			</div>
 			<div class="carousel-item"> 
-			<img src="assets/images/banner-3.png" alt="...">
+			<img src="assets/images/banner-3.png" alt="..." class="desk-slide">
+            <img src="assets/images/banner-3-mob.png" alt="..." class="mob-slide">
 			<div class="carousel-caption">
 				<div class="hero-text">
 				  <h1 class="text-pink">Your Insurance Journey Begins  <span>at PolicyMarket.ca</span></h1>
-				  <button type="Submit" class="btn btn-prim-round">Get a Quote</button>
+				  <button type="Submit" onclick="location.href='{{ route('services') }}'"  class="btn btn-prim-round">Get a Quote</button>
 				</div>
 		  </div>
 			</div>
@@ -52,7 +55,8 @@
 	  
 	  
     </div>
-    <div class="poins">
+    
+    <!--<div class="poins">
       <h4>Select a product to see your quotes</h4>
       <div class="row">
         <div class="col-lg-4"> <a href="#">
@@ -73,7 +77,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
+    
+    
   </div>
 </div>
 <div class="section-larger about-section">
@@ -87,7 +93,7 @@
     </div>
     <div class="row vertical-cntr">
       <div class="col-lg-12">
-        <p>At PolicyMarket, we're all about simplifying your insurance journey. We understand that finding the right insurance coverage can be a daunting task, and that's why we're here to transform the experience into something seamless, easy, and tailored to your unique needs. Our one-stop platform empowers you to compare options, receive expert advice, purchase policies, and manage your insurance portfolio effortlessly.</p>
+        <p>At Policy Market, we're all about simplifying your insurance journey. We understand that finding the right insurance coverage can be a daunting task, and that's why we're here to transform the experience into something seamless, easy, and tailored to your unique needs. Our one-stop platform empowers you to compare options, receive expert advice, purchase policies, and manage your insurance portfolio effortlessly.</p>
         <p>Since 2008, we've been navigating the world of financial services, dedicating ourselves to crafting personalized solutions that cater to your specific requirements. From safeguarding your health to ensuring your family's financial security, we've got you covered. Planning a global adventure or welcoming visitors to Canada? Explore our competitive travel health and medical insurance options. Whether it's Personal, Business, Life, Investments, retirement planning, or employee benefits, our experienced brokers are here to guide you towards the ideal plan.</p>
       </div>
       <!--<div class="col-lg-6 col-md-12 col-sm-12">
@@ -180,6 +186,25 @@
 	</div>
 </section>
 
+
+
+<section class="middle-contact">
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-3">
+    	<img src="assets/images/compare.png" class="img-fluid" alt="">
+    </div>
+    	<div class="col-lg-6">
+        	<h2>Compare and buy Insurance Plan</h2>
+        </div>
+        <div class="col-lg-3">
+        	<a href="#" class="buyNow"> Buy Now</a>
+        </div>
+    </div>
+</div>
+</section>
+
+
 <section class="make-us-section">
   <div class="container">
     <div class="row">
@@ -194,7 +219,7 @@
         <div class="box">
 			<span><img src="assets/images/comparison.png" class="img-fluid" alt=""></span>
           <h3>Simplified Comparison Shopping</h3>
-          <p>Bid farewell to the hassle of filling out forms across multiple websites. With PolicyMarket's modern tools, you can effortlessly compare quotes from leading insurance companies side by side within 30 seconds. Already insured? We're here to help you explore better options, including potential lower rates.</p>
+          <p>Bid farewell to the hassle of filling out forms across multiple websites. With Policy Market's modern tools, you can effortlessly compare quotes from leading insurance companies side by side within 30 seconds. Already insured? We're here to help you explore better options, including potential lower rates.</p>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
@@ -202,7 +227,7 @@
 		<span><img src="assets/images/advice.png" class="img-fluid" alt=""></span>
           <h3>Client-Centric <br />
             Advice</h3>
-          <p>Your interests always take precedence at PolicyMarket. Our licensed insurance agents and well-researched articles are at your service whether you want to engage in live conversations or conduct independent research. We're committed to not only selling products but also ensuring that you're equipped with the knowledge to make </p>
+          <p>Your interests always take precedence at Policy Market. Our licensed insurance agents and well-researched articles are at your service whether you want to engage in live conversations or conduct independent research. We're committed to not only selling products but also ensuring that you're equipped with the knowledge to make </p>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">

@@ -133,10 +133,7 @@
     line-height: 25px;
 }
 
-.main-header .navbar {
-    background: #18191b;
-    padding: 6px 0 6px 0;
-}
+
 
 
 
@@ -249,17 +246,7 @@
     line-height: 23px;
 }
 
-.quote-left p span {
-    background: #0773bf;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    font-size: 18px;
-    line-height: 40px;
-    color: #fff;
-    border-radius: 50%;
-    margin: 0px 0 0 7px;
-}
+
 
 .quote-left .form-control {
     border-radius: 5px;
@@ -843,15 +830,7 @@
     opacity: 1;
 }
 
-.quote {
-    background: #0773bf;
-    color: #fff;
-    padding: 8px 12px;
-    display: inherit;
-    margin-top: 15px;
-    border: none;
-    border-radius: 5px;
-}
+
 
 
 .seconddate {
@@ -872,10 +851,9 @@
 
 
 
-/* .otheramt {
-  display: none;
-} */
-
+/*.otheramt {*/
+/*  display: none;*/
+/*}*/
 
 .otheramt-toggle {
     color: #1bbc9b;
@@ -1162,9 +1140,7 @@ span.text-black{
     margin-bottom: 20px;
     border-radius: 10px;
 }
-.card-body {
-    background-color: #ffffff;
-}
+
 
 .card-body .btn-link{
     display: block;
@@ -1223,16 +1199,7 @@ span.text-black{
     box-shadow: none;
 }
 
-.card-header h2 button{
-    color: #000;
-    text-transform: initial;
-    letter-spacing: initial;
-    font-weight: 500;
-    font-size: 16px;
-    width: 100%;
-    text-align: left;
-    margin-top: 0;
-}
+
 
 .card-header h2 button:visited{
    text-decoration: none;
@@ -1523,12 +1490,7 @@ span.text-black{
     position: relative;
 	    gap: 50px;
 }
-.navbar-light .navbar-nav .nav-link {
-    font-size: 16px;
-    color: #ffffff;
-    transition: all .3s ease-in-out;
-    padding: 20px 19px;
-}
+
 
 .navbar-light .navbar-nav .nav-link:focus{
 	color: #f23750 !important;
@@ -1557,74 +1519,27 @@ span.text-black{
 
 
 /* ====== NAV BAR DROPDOWN ====== */
-.navbar-expand-lg .navbar-nav .dropdown-menu {
-    margin-top: 0px;
-	background: #fffdf2;
-	border: none;
-    border-radius: 0px 0px 10px 10px;
-    overflow: hidden;
-    padding: 0px;
-    transition: all .1s ease-in-out;
-    border-top: 3px solid #f23750;
-}
+
 
 .navbar-expand-lg .navbar-nav .dropdown-menu.dropdownscrolled {
     margin-top: 0px;
 }
 
-.dropdown-menu .dropdown-item{
-    display: block;
-    width: 100%;
-    padding: 15px 10px;
-    clear: both;
-    font-weight: 400;
-    color: #666666;
-    text-align: left;
-    white-space: nowrap;
-    background-color: transparent;
-    box-shadow: none;
-}
-
-.dropdown-menu .dropdown-item:hover{
-    color: #ffffff;
-    white-space: nowrap;
-    background-color: #f23750;
-    
-}
-
-.dropdown-menu .dropdown-item::before{
-    content: '-';
-    font-weight: bold;
-    color: #ffffff;
-    padding-right: 5px;
-    margin-left: -5px;
-    opacity: 0;
-    transition: all .2s ease-in-out;
-}
-.dropdown-menu .dropdown-item:hover::before{
-    content: '-';
-    font-weight: bold;
-    color: #ffffff;
-    padding-right: 10px;
-    margin-left: 3px;
-    opacity: 1;
-}
 
 
-.dropdown-menu a{
-    font-size: 15px;
 
-}
+
+
+
+
+
+
 
 
 /* ====== 1.2 - NAV BAR ENDS ====== */
 
 /* ====== 1.3 - CAROUSEL STARTS ====== */
-.hero-image{
-        background: #f3f6fc;
-    padding-top: 150px;
-	padding-bottom:60px;
-}
+
 
 
 .hero-image .row {
@@ -1688,15 +1603,7 @@ span.text-black{
 }
 
 
-.about-section .title-center h2 {
-    padding-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
-}
 
-.about-section .title-center h2 span{
-	color:#da1203;
-}
 
 .about-section .title-center {
     text-align: center;
@@ -1770,10 +1677,7 @@ span.text-black{
 }
 
 
-.CounterSection {
-	padding:80px 0;
-	    background: #f3f6fc;
-}
+
 
 
 .CounterSection .conterBox {
@@ -1818,14 +1722,7 @@ span.text-black{
 	padding-right:8px;
 }
 
-.CounterSection h4 {
-        padding: 0px 0 40px 0;
-    margin: 0px;
-    font-size: 32px;
-    font-weight: 700;
-    color: #000;
-	text-align:center;
-}
+
 
 
 
@@ -1893,40 +1790,12 @@ span.text-black{
 }
 
 
-.cookies-popup {
-        display: none;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #363535f2;
-        color: white;
-        padding: 10px;
-        text-align: left;
-    }
-	
-	.cookies-popup a{
-		color:#0066CC;
-		text-decoration:underline;
-		padding:0 10px 0 0;
-	}
 
-    .popup-content {
-        
-        margin: 0 auto;
-    }
 	
-	.popup-content p{
-		color:#fff;
-	}
+	
 
-    #accept-cookies {
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
+
+
 
 
 
@@ -1987,21 +1856,9 @@ span.text-black{
 
 
 
-.faq-section {
-	padding:80px 0;
-	background:#f3f6fc;
-}
 
 
-.faq-section .title-center h2 {
-    padding-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
-}
 
-.faq-section .title-center h2 span {
-    color: #d91203;
-}
 
 .faq-section .title-center {
     text-align: center;
@@ -2017,15 +1874,7 @@ span.text-black{
 }
 
 
-.testimonials .title-center h2 {
-    padding-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
-}
 
-.testimonials .title-center h2 span {
-    color: #d91203;
-}
 
 .testimonials .title-center {
     text-align: center;
@@ -2044,15 +1893,7 @@ span.text-black{
 }
 
 
-.blog-section .title-center h2 {
-    padding-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
-}
 
-.blog-section .title-center h2 span {
-    color: #d91203;
-}
 
 .blog-section .title-center {
     text-align: center;
@@ -2166,52 +2007,14 @@ span.text-black{
 }
 
 
-.make-us-section .title-center h2 {
-    padding-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
-}
 
-.make-us-section .title-center h2 span {
-    color: #d91203;
-}
 
 .make-us-section .title-center {
     text-align: center;
     padding-bottom: 30px;
 }
 
-.make-us-section .box {
-    border: #efefef solid 1px;
-    border-radius: 10px;
-    background: #f3f6fc;
-    padding: 30px 17px 30px 17px;
-    min-height: 475px;
-    transition: all .4s ease-in-out;
-    text-align: center;
-}
 
-.make-us-section .box span {
-    background: #fff;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    text-align: center;
-    display: inline-block;
-    line-height: 90px;
-    margin-bottom: 20px;
-	box-shadow: #e5e5e5 0px 0px 30px;
-}
-
-
-
-.make-us-section .box:hover{
-	box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
-}
-
-.make-us-section .box:hover h3{
-	color:#d91203 !important;
-}
 
 
 
@@ -2256,9 +2059,7 @@ span.text-black{
 
 
 
-.compare-table {
-	padding:60px 0 60px 0;
-}
+
 
 .compare-table .price-section h3 {
     font-size: 29px;
@@ -2330,15 +2131,7 @@ span.text-black{
 
 
 
-.partner-section .title-center h2 {
-    padding-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
-}
 
-.partner-section .title-center h2 span {
-    color: #d91203;
-}
 
 .partner-section .title-center {
     text-align: center;

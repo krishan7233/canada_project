@@ -23,7 +23,7 @@
               <input type="hidden" name="start_date" class="start_date" value="{{$requestData['start_date']}}">
               <input type="hidden" name="end_date" class="end_date" value="{{$requestData['end_date']}}">
               <input type="hidden" name="no_of_days" class="no_of_days" value="{{$requestData['no_of_days']}}">
-            <div class="coverage"> <span>Deductible</span>
+            <div class="coverage"> <span class="pnkBg">Deductible</span>
               <select class="form-control deductible_amt">
                 <option value="0" {{ $requestData['deductible'] == 0 ? 'selected' : '' }}>0</option>
                 <option value="75" {{ $requestData['deductible'] == 75 ? 'selected' : '' }}>75</option>
@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="form-field-row">
-            <div class="coverage"> <span>Coverage</span>
+            <div class="coverage"> <span class="LightYellowBg">Coverage</span>
               <select class="form-control  coverage_amt">
                 <option value="100000" {{ $requestData['coverage_amt'] == 100000 ? 'selected' : '' }}>100,000</option>
                 <option value="150000" {{ $requestData['coverage_amt'] == 150000 ? 'selected' : '' }}>150,000</option>
@@ -101,10 +101,15 @@
               
               </span></h3>
             </div>
-            <div class="btn-section"> <a target="_blank" href="{{url('single-plan?visitor_type='.request('visitor_type').'&visa_type='.request('visa_type').'&deductible='.request('deductible').'&date_of_birth='.request('date_of_birth').'&age='.request('age').'&start_date='.request('start_date').'&end_date='.request('end_date').'&no_of_days='.request('no_of_days').'&coverage_amt='.request('coverage_amt').'&pre_exit='.request('pre_exit').'&buyer_id='.$ratePackage['id'].'')}}" class="buy-now">BUY NOW </a> 
-            <a href="#" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails_{{$ratePackage['id']}}({{$ratePackage['id']}})">PLAN DETAILS</a>
+            <div class="btn-section"> 
+            <button class="btn btn-primary compareData" id="compare_btn_{{$ratePackage['id']}}" style="display:none;">Compare</button>
+            <a target="_blank" href="{{url('single-plan?visitor_type='.request('visitor_type').'&visa_type='.request('visa_type').'&deductible='.request('deductible').'&date_of_birth='.request('date_of_birth').'&age='.request('age').'&start_date='.request('start_date').'&end_date='.request('end_date').'&no_of_days='.request('no_of_days').'&coverage_amt='.request('coverage_amt').'&pre_exit='.request('pre_exit').'&buyer_id='.$ratePackage['id'].'')}}" class="buy-now">Buy Now </a> 
+            
+            <a href="javascript:void(0)" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails_{{$ratePackage['id']}}({{$ratePackage['id']}})">Plan Details</a>
+            
+            
             <!-- <a href="#" class="plan-details toggle compareData" id="compare_btn_{{$ratePackage['id']}}" style="display:none;">COMPARE</a> -->
-            <button class="btn btn-primary compareData" id="compare_btn_{{$ratePackage['id']}}" style="display:none;">COMPARE</button>
+            
               <div class="compaire">
                 <div class="left">
                   <input type="checkbox" class="form-check-input compare" id="exampleCheck1" value="{{$ratePackage['id']}}">

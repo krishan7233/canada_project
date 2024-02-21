@@ -27,7 +27,7 @@ if($_REQUEST['visitor_family_exit']==1){
         <div class="quote-left">
           <p>Visitors to Canada Insurance for Family(age {{$_REQUEST['visitor_family_policy_year1']}} years and {{$_REQUEST['visitor_family_policy_year2']}} years) for 90 days, {{$exits_data}} <a href="{{url('visitor-visa-insurance?visa_type='.$_REQUEST['visa_type'].'&visitor_type='.$_REQUEST['visitor_type'].'&visitor_family_deductible='.$_REQUEST['visitor_family_deductible'].'&visitor_family_policy_date1='.$_REQUEST['visitor_family_policy_date1'].'&visitor_family_policy_year1='.$_REQUEST['visitor_family_policy_year1'].'&visitor_family_policy_date2='.$_REQUEST['visitor_family_policy_date2'].'&visitor_family_policy_year2='.$_REQUEST['visitor_family_policy_year2'].'&visitor_family_start_date='.$_REQUEST['visitor_family_start_date'].'&visitor_family_end_date='.$_REQUEST['visitor_family_end_date'].'&visitor_family_days='.$_REQUEST['visitor_family_days'].'&visitor_family_coverage_amt='.$_REQUEST['visitor_family_coverage_amt'].'&visitor_family_exit='.$_REQUEST['visitor_family_exit'].'')}}"><span><i class="fa fa-pencil"></i></span></a></p>
           <div class="form-field-row">
-            <div class="coverage"> <span>Deductible</span>
+            <div class="coverage"> <span class="pnkBg">Deductible</span>
               <select class="form-control visitor_family_deductible" name="visitor_family_deductible">
                 <option value="0" {{ $_REQUEST['visitor_family_deductible'] == 0 ? 'selected' : '' }}>0</option>
                 <option value="100" {{ $_REQUEST['visitor_family_deductible'] == 100 ? 'selected' : '' }}>100</option>
@@ -35,13 +35,14 @@ if($_REQUEST['visitor_family_exit']==1){
                 <option value="500" {{ $_REQUEST['visitor_family_deductible'] == 500 ? 'selected' : '' }}>500</option>
                 <option value="1000" {{ $_REQUEST['visitor_family_deductible'] == 1000 ? 'selected' : '' }}>1000</option>
                 <option value="2500" {{ $_REQUEST['visitor_family_deductible'] == 2500 ? 'selected' : '' }}>2500</option>
+                <option value="3000" {{ $_REQUEST['visitor_family_deductible'] == 3000 ? 'selected' : '' }}>3000</option>
                 <option value="5000" {{ $_REQUEST['visitor_family_deductible'] == 5000 ? 'selected' : '' }}>5000</option>
                 <option value="10000" {{ $_REQUEST['visitor_family_deductible'] == 10000 ? 'selected' : '' }}>10000</option>
               </select>
             </div>
           </div>
           <div class="form-field-row">
-            <div class="coverage"> <span>Coverage</span>
+            <div class="coverage"> <span class="LightYellowBg">Coverage</span>
               <select class="form-control  visitor_family_coverage_amt" name="visitor_family_coverage_amt">
               <option value="10000" {{ $_REQUEST['visitor_family_coverage_amt'] == 10000 ? 'selected' : '' }}>10,000</option>  
               <option value="15000" {{ $_REQUEST['visitor_family_coverage_amt'] == 15000 ? 'selected' : '' }}>15,000</option>
@@ -87,9 +88,11 @@ if($_REQUEST['visitor_family_exit']==1){
               
               </span></h3>
             </div>
-            <div class="btn-section"> <a href="{{url('visitor-single-plan?visitor_type='.request('visitor_type').'&visa_type='.request('visa_type').'&deductible='.request('deductible').'&date_of_birth='.request('date_of_birth').'&age='.request('age').'&start_date='.request('start_date').'&end_date='.request('end_date').'&no_of_days='.request('no_of_days').'&coverage_amt='.request('coverage_amt').'&pre_exit='.request('pre_exit').'&buyer_id='.$ratePackage['id'].'')}}" target="_blank" class="buy-now">BUY NOW</a> 
-            <a href="#" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails{{$ratePackage['id']}}({{$ratePackage['id']}})">PLAN DETAILS</a>
-            <button class="btn btn-primary visitor_family_compareData compareData" id="visitor_family_compare_btn_{{$ratePackage['id']}}" style="display:none;">COMPARE</button>
+            <div class="btn-section"> 
+            <button class="btn btn-primary visitor_family_compareData compareData" id="visitor_family_compare_btn_{{$ratePackage['id']}}" style="display:none;">Compare</button>
+            <a href="{{url('visitor-single-plan?visitor_type='.request('visitor_type').'&visa_type='.request('visa_type').'&deductible='.request('deductible').'&date_of_birth='.request('date_of_birth').'&age='.request('age').'&start_date='.request('start_date').'&end_date='.request('end_date').'&no_of_days='.request('no_of_days').'&coverage_amt='.request('coverage_amt').'&pre_exit='.request('pre_exit').'&buyer_id='.$ratePackage['id'].'')}}" target="_blank" class="buy-now">Buy Now</a> 
+            <a href="javascript:void(0)" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails{{$ratePackage['id']}}({{$ratePackage['id']}})">Plan Details</a>
+            
           <div class="compaire">
                 <div class="left">
                   <input type="checkbox" class="form-check-input visitor_family_compare compare" id="visitor_family_compare" value="{{$ratePackage['id']}}">

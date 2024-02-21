@@ -22,7 +22,7 @@
             	<div class="field-dob">
                 	 <span>Date of Birth</span>
                 	<input type="date" id="singledob" class="form-control" placeholder="Date of Birth" data-date="" data-date-format="DD MMMM YYYY">
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="field-or">or</div>
                 <div class="field-tage">
@@ -36,12 +36,12 @@
             	<div class="sdate">
                 	 <span>Start Date</span>
                 	<input type="date" class="form-control" placeholder="Date of Birth" value="2023-09-18">
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="edate">
                 	 <span>End Date</span>
                 	<input type="date" class="form-control" placeholder="Date of Birth" value="2023-09-18" disabled>
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="field-or">or</div>
                 <div class="field-tdays">
@@ -89,7 +89,7 @@
             	<div class="field-dob">
                 	 <span>Date of Birth</span>
                 	<input type="date" class="form-control" placeholder="Date of Birth">
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="field-or">or</div>
                 <div class="field-tage">
@@ -104,7 +104,7 @@
             	<div class="field-dob">
                 	 <span>Date of Birth</span>
                 	<input type="date" class="form-control" placeholder="Date of Birth">
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="field-or">or</div>
                 <div class="field-tage">
@@ -118,12 +118,12 @@
             	<div class="sdate">
                 	 <span>Start Date</span>
                 	<input type="date" class="form-control" placeholder="Date of Birth" value="2023-09-18">
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="edate">
                 	 <span>End Date</span>
                 	<input type="date" class="form-control" placeholder="Date of Birth" value="2023-09-18" disabled>
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="field-or">or</div>
                 <div class="field-tdays">
@@ -139,12 +139,12 @@
             	<div class="sdate">
                 	 <span>Start Date</span>
                 	<input type="date" class="form-control" placeholder="Date of Birth" value="2023-09-18">
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="edate">
                 	 <span>End Date</span>
                 	<input type="date" class="form-control" placeholder="Date of Birth" value="2023-09-18" disabled>
-                    <label>MM-DD-YYYY format</label>
+                    <label>DD-MM-YYYY format</label>
                 </div>
                 <div class="field-or">or</div>
                 <div class="field-tdays">

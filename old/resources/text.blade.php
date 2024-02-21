@@ -1,9 +1,0 @@
-$visa_type=$visitorVisaCouple2['visa_type'];
-        $deductible=$visitorVisaCouple2['detectible_amount'];
-        $date_of_birth=$visitorVisaCouple2['visitor_visa_couple_birth2'];
-        $age=$visitorVisaCouple2['visitor_visa_couple_age2'];
-        $start_date=$visitorVisaCouple2['visitor_visa_couple_start_date2'];
-        $end_date=$visitorVisaCouple2['visitor_visa_couple_end_date2'];
-        $no_of_days=$visitorVisaCouple2['visitor_visa_couple_days2'];
-        $coverage_amt=$visitorVisaCouple2['visitor_visa_couple_coverage2'];
-        $pre_exit=$visitorVisaCouple2['visitor_visa_couple_exit2'];

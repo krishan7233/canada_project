@@ -27,6 +27,9 @@ Route::get('/contact-us', [AuthController::class, 'contactus'])->name('contact-u
 
 Route::get('/blog', [AuthController::class, 'Blog'])->name('blog');
 
+Route::get('/faq', [AuthController::class, 'Faq'])->name('faq');
+Route::get('/services', [AuthController::class, 'Services'])->name('services');
+
 Route::get('/privacy-policy', [AuthController::class, 'privacypolicy'])->name('privacy-policy');
 Route::get('/terms-and-conditions', [AuthController::class, 'termsconditions'])->name('terms-and-conditions');
 
@@ -123,17 +126,33 @@ Route::get('visitor-family-plan/{id}', [AuthController::class, 'visitorFamilyPla
 
 
 // admin dashboard
+// Route::get('admin-login', [AdminLoginController::class, 'admin_login'])->name('admin-login');
+// Route::post('admin-login-post', [AdminLoginController::class, 'adminLoginPost'])->name('admin-login-post');
+// // dashboard
+// Route::get('admin-dashboard', [DashboardController::class, 'dashboard'])->name('admin-dashboard');
+// Route::get('admin-registration-list', [DashboardController::class, 'registrationList'])->name('admin-registration-list');
+// Route::post('admin-registration-update-status', [DashboardController::class, 'registrationUpdateStatus'])->name('admin-registration-update-status');
+// Route::get('admin-detectible-list/{id}', [DashboardController::class, 'amountDetectibleList'])->name('admin-detectible-list');
+// Route::get('admin-add-rate', [DashboardController::class, 'addRate'])->name('admin-add-rate');
+// Route::post('admin-rate-price-post', [DashboardController::class, 'ratePricePost'])->name('admin-rate-price-post');
+// Route::post('admin-get-detectible', [DashboardController::class, 'getDetictible'])->name('admin-get-detectible');
+// Route::post('admmin-add-rate-post', [DashboardController::class, 'addRatePost'])->name('admmin-add-rate-post');
+// Route::get('admmin-edit-rate/{id}', [DashboardController::class, 'editRate'])->name('admmin-edit-rate');
+// Route::get('admmin-view-rate/{id}', [DashboardController::class, 'viewRate'])->name('admmin-view-rate');
+// Route::get('admin-rate-price-get', [DashboardController::class, 'ratePriceGet'])->name('admin-rate-price-get');
 Route::get('admin-login', [AdminLoginController::class, 'admin_login'])->name('admin-login');
 Route::post('admin-login-post', [AdminLoginController::class, 'adminLoginPost'])->name('admin-login-post');
 // dashboard
 Route::get('admin-dashboard', [DashboardController::class, 'dashboard'])->name('admin-dashboard');
-Route::get('admin-registration-list', [DashboardController::class, 'registrationList'])->name('admin-registration-list');
-Route::post('admin-registration-update-status', [DashboardController::class, 'registrationUpdateStatus'])->name('admin-registration-update-status');
-Route::get('admin-detectible-list/{id}', [DashboardController::class, 'amountDetectibleList'])->name('admin-detectible-list');
-Route::get('admin-add-rate', [DashboardController::class, 'addRate'])->name('admin-add-rate');
-Route::post('admin-rate-price-post', [DashboardController::class, 'ratePricePost'])->name('admin-rate-price-post');
-Route::post('admin-get-detectible', [DashboardController::class, 'getDetictible'])->name('admin-get-detectible');
-Route::post('admmin-add-rate-post', [DashboardController::class, 'addRatePost'])->name('admmin-add-rate-post');
-Route::get('admmin-edit-rate/{id}', [DashboardController::class, 'editRate'])->name('admmin-edit-rate');
-Route::get('admmin-view-rate/{id}', [DashboardController::class, 'viewRate'])->name('admmin-view-rate');
-Route::get('admin-rate-price-get', [DashboardController::class, 'ratePriceGet'])->name('admin-rate-price-get');
+Route::get('admin-company-list', [DashboardController::class, 'companyList'])->name('admin-company-list');
+Route::get('admin-package-list/{id}', [DashboardController::class, 'packageList'])->name('admin-package-list');
+Route::get('admin-add-company', [DashboardController::class, 'addCompany'])->name('admin-add-company');
+Route::post('admin-company-post', [DashboardController::class, 'addCompanyPost'])->name('admin-company-post');
+Route::get('admin-edit-company/{id}', [DashboardController::class, 'editCompany'])->name('admin-edit-company');
+Route::get('admin-add-package/{id}', [DashboardController::class, 'addPackage'])->name('admin-add-package');
+Route::post('admin-package-post', [DashboardController::class, 'addPackagePost'])->name('admin-package-post');
+Route::get('admin-edit-package', [DashboardController::class, 'editPackage'])->name('admin-edit-package');
+Route::get('admin-delete-package', [DashboardController::class, 'deletePackage'])->name('admin-delete-package');
+Route::get('admin-update-company-detail', [DashboardController::class, 'updateCompanyDetail'])->name('admin-update-company-detail');
+Route::post('admin-company-detail-post', [DashboardController::class, 'updateCompanyDetailPost'])->name('admin-company-detail-post');
+Route::get('admin-logout', [DashboardController::class, 'logout'])->name('admin-logout');

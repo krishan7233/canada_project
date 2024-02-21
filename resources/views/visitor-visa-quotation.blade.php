@@ -31,7 +31,7 @@
             <div class="coverage"> <span>Deductible  </span>
               <select class="form-control visitor-couple-deductible-amt" name="deductible_amt">
               <option value="0" {{ $visitorVisaCouple1['detectible_amount'] == 0 ? 'selected' : '' }}>0</option>
-              <option value="100" {{ $visitorVisaCouple1['detectible_amount'] == 100 ? 'selected' : '' }}>100</option>
+              <option value="100" {{ $visitorVisaCouple1['detectible_amount'] == 100 ? 'selected' : '' }}>100 </option>
               <option value="250" {{ $visitorVisaCouple1['detectible_amount'] == 250 ? 'selected' : '' }}>250</option>
               <option value="500" {{ $visitorVisaCouple1['detectible_amount']== 500 ? 'selected' : '' }}>500</option>
               <option value="1000" {{ $visitorVisaCouple1['detectible_amount'] == 1000 ? 'selected' : '' }}>1000</option>
@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="form-field-row">
-            <div class="coverage"> <span>Coverage List 1</span>
+            <div class="coverage"> <span class="pnkBg">Coverage 1st</span>
               <select class="form-control  visitor-couple-coverage-amt1" name="coverage_amt1">
                 <option value="10000" {{$visitorVisaCouple1['visitor_visa_couple_coverage1']==10000 ? 'selected' : ''}}>10,000</option>
                 <option value="15000" {{$visitorVisaCouple1['visitor_visa_couple_coverage1']==15000 ? 'selected' : ''}}>15,000</option>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="form-field-row">
-            <div class="coverage"> <span>Coverage List 2</span>
+            <div class="coverage"> <span class="LightYellowBg">Coverage 2nd</span>
               <select class="form-control  visitor-couple-coverage-amt2" name="coverage_amt2">
                  <option value="10000" {{$visitorVisaCouple2['visitor_visa_couple_coverage2']==10000 ? 'selected' : ''}}>10,000</option>
                 <option value="15000" {{$visitorVisaCouple2['visitor_visa_couple_coverage2']==15000 ? 'selected' : ''}}>15,000</option>
@@ -78,6 +78,7 @@
             </div>
           </div>
           <h6>Would you like to cover pre-existing medical conditions?</h6>
+          <span class="number1">1</span>
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="not_exit1" name="visitor_couple_exit1" class="custom-control-input " value="0" {{$visitorVisaCouple1['visitor_visa_couple_exit1']==0 ? 'checked' : ''}}>
             <label class="custom-control-label" for="not_exit1">No</label>
@@ -86,6 +87,8 @@
             <input type="radio" id="exit1" name="visitor_couple_exit1" class="custom-control-input" value="1" {{$visitorVisaCouple1['visitor_visa_couple_exit1']==1 ? 'checked' : ''}}>
             <label class="custom-control-label" for="exit1">Yes</label>
           </div></br>
+          
+           <span class="number22">2</span>
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" id="not_exit2" name="visitor_couple_exit2" class="custom-control-input" value="0" {{$visitorVisaCouple2['visitor_visa_couple_exit2']==0 ? 'checked' : ''}}>
             <label class="custom-control-label" for="not_exit2">No</label>
@@ -124,7 +127,10 @@
               <h3><span>Deductible <strong>{{number_format($package['detectible'])}}  </strong> {{policyType($package['c_id'])}} 
             </span></h3>
             </div>
-            <div class="btn-section"> <a target="_blank" href="{{ url('visitor-visa-couple-plan-buyer?' . 
+            <div class="btn-section"> 
+            <button class="btn btn-primary visitor_visa_couple_compare_data" id="visitor_visa_couple_compare_btn_{{$button_id}}" style="display:none;">Compare</button>
+            
+            <a target="_blank" href="{{ url('visitor-visa-couple-plan-buyer?' . 
                 'visa_type=' . request('visa_type') . '&' . 
                 'visitor_visa_couple_birth1=' . request('visitor_visa_couple_birth1') . '&' . 
                 'visitor_visa_couple_age1=' . request('visitor_visa_couple_age1') . '&' . 
@@ -142,13 +148,15 @@
                 'visitor_visa_couple_exit1=' . request('visitor_visa_couple_exit1') . '&' . 
                 'visitor_visa_couple_exit2=' . request('visitor_visa_couple_exit2') . '&' . 
                 'buyer_id=' . $button_id
-            ) }}" class="buy-now">BUY NOW</a> 
-            <a href="#" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails_{{$button_id}}()">PLAN DETAILS</a>
+            ) }}" class="buy-now">Buy Now</a> 
+            
+            <a href="javascript:void(0)" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails_{{$button_id}}()">Plan Details</a>
+            
               <div class="compaire">
                 <div class="left">
                   <input type="checkbox" class="form-check-input visitor_visa_couple_compare" id="visitor_visa_couple_compare" value="{{$button_id}}">
                   <label class="form-check-label" for="super_visa_couple_compare">Compare</label>
-                  <button class="btn btn-primary visitor_visa_couple_compare_data" id="visitor_visa_couple_compare_btn_{{$button_id}}" style="display:none;">COMPARE</button>
+                  <!--<button class="btn btn-primary visitor_visa_couple_compare_data" id="visitor_visa_couple_compare_btn_{{$button_id}}" style="display:none;">Compare</button>-->
 
                 </div>
                 <div class="right"> <a target="_blank" href="{{ url('visitor-visa-couple-plan-buyer?' . 

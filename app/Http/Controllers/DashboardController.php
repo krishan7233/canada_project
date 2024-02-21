@@ -11,180 +11,145 @@ class DashboardController extends Controller
 {
     public function dashboard(){
         $data['title'] = "Dashboard";
-        $data['all_registration'] =  0;//DB::table('registration')->count();
-        $data['pending_registration'] =0; //  DB::table('registration')->where('approval',1)->count();
-        $data['approval_registration'] = 0;// DB::table('registration')->where('approval',2)->count();
-        $data['not_approval_registration'] = 0;// DB::table('registration')->where('approval',3)->count();
-
-
-
+        $data['total_company'] =  DB::table('tbl_companies')->count();
+        $data['total_package'] =DB::table('rate_with_detectible_amt')->count();
         return view('backend.index',$data);
     }
-    public function registrationList(){
-        $company_id = request('company_id');
-        $type = request('type');
-        $exit = request('exit');
-
-        $data['title'] = "Registration List";
-        $query= DB::table('tbl_rates')->select('id','c_id','age_id','aggregate_id','pre_exit','rate','status','plan_type');
-        if($company_id){
-            $query->where('c_id',$company_id);
-        }
-        if($type){
-            $query->where('plan_type',$type);
-        }
-        if($exit){
-            if($exit==1){
-                $exit =0;
-            }else{
-                $exit=1;
-            }
-            $query->where('pre_exit',$exit);
-        }
-        $data['registers'] = $query->orderBy('id', 'DESC')->get();
-        
-        return view('backend.rate-list',$data);
-
+    public function companyList(){
+        $query = DB::table('tbl_companies')->orderByDesc('id')->where('status',1)->get();
+        $data['company_list'] = $query;
+        return view('backend.company-list',$data);
     }
-    public function registrationUpdateStatus(Request $req){
-        $message = "";
-        $queries = DB::table('registration') ->where('id', $req->id) ->update([ 'approval' => $req->approval]);
-        if($queries){
-            $message = "Registration approval  status updated successfully."; 
-            Session::flash('success', $message);
-
-            return response()->json([
-                'status'=>true,
-                'code'=>200,
-                'type'=>"success",
-                'message' => $message,
-            ]);
-        }
-        $message = "Oops! Something went wrong.";
-        Session::flash('error', $message);
-
-        return response()->json([
-            'status'=>false,
-            'code'=>403,
-            'type'=>"error",
-            'message' => $message,
-        ]);
+    public function packageList($c_id){
+        $query = DB::table('rate_with_detectible_amt')->where('c_id',$c_id)->orderByDesc('id')->get();
+        $data['package_list'] = $query;
+        return view('backend.package-list',$data);
     }
-
-    public function amountDetectibleList($id){
-        $data['title'] = "Detectible List";
-        $data['detect_list'] = detectibleList($id);
-        $data['company_name']=companyName($id)->company_name;
-
-        return view('backend.detectible-list',$data);
+    public function addCompany(){
+        return view("backend.add-company");
     }
-    public function addRate(){
-        $data['title'] = "Rate Price Add";
-
-
-        return view('backend.add-rate',$data);
-    }
-    public function ratePricePost(Request $req){
-        $priceList = companyWiseAggregatePrice($req->company);
-        $ageList = companyWiseAgeGroup($req->company);
-        $detectList = companyWiseDetectible($req->company);
-        
-
-        $ageOptions = "";
-        $priceOptions = "";        
-        $detectOptions = "";        
-        foreach ($priceList as $price) {
-            $priceOptions .= "<option value='".$price->id."'>".$price->price."</option>";
+    public function addCompanyPost(Request $req){
+        $validation['company_name']="required";
+        $validation['per_plicy_claim']="required";
+        $validation['per_month']="required";
+        $validation['visa_type']="required";
+        if($req->file('photo')){
+            $validation['photo']="required|image|mimes:jpeg,png,jpg";
         }
-        
-        foreach ($ageList as $age) {
-            $ageOptions .= "<option value='".$age->id."'>".$age->start_age.'-'.$age->end_age."</option>";
+        $req->validate($validation);
+        if($req->file('photo')){
+            $rand = rand(11111,99999);
+            $uploadedFile = $req->file('photo');
+            $newFileName = $rand."company".time().'.'.$uploadedFile->getClientOriginalExtension();
+            $uploadedFile->move(public_path('images'), $newFileName);
+            $data['photo']= asset("images/".$newFileName);       
         }
-        
-        foreach ($detectList as $detect) {
-            $detectOptions .= "<option value='".$detect->id."'>".$detect->deductible_amt."</option>";
-        }
-        
-        $data = ['price' => $priceOptions, 'age' => $ageOptions,'detect'=>$detectOptions];
-        return response()->json($data);
-    }
-
-    public function getDetictible(Request $req){
-        $detectOptions = "";        
-
-        $detectibleList = detectible($req->company,$req->age_id);
-        foreach ($detectibleList as $detect) {
-            $detectOptions .= "<option value='".$detect->id."'>".$detect->deductible_amt."</option>";
-        }
-        return $detectOptions;
-        
-    }
-    public function addRatePost(Request $req){
-        
-        $req->validate([
-            'company_id' => 'required',
-            'aggregate_price' => 'required',
-            'age' => 'required',
-            'medical' => 'required',
-            'plan_type' => 'required',
-            'rate' => 'required',
-        ]);
-        $data = [
-            'c_id'=>$req->company_id,
-            'aggregate_id'=>$req->aggregate_price,
-            'age_id'=>$req->age,
-            'pre_exit'=>$req->medical,
-            'plan_type'=>$req->plan_type,
-            'rate'=>$req->rate,
-        ];
+        $data['company_name'] = $req->company_name;
+        $data['per_plicy_claim'] = $req->per_plicy_claim;
+        $data['per_month'] = $req->per_month;
+        $data['visa_type'] = $req->visa_type;
         if($req->id){
-            if(DB::table('tbl_rates')->where('id',$req->id)->update($data)){
-                return redirect("admin-registration-list")->with('success','record updated successfully.');
-            }
-            return redirect()->back()->with('error','New record something wrong.');
-
+            DB::table('tbl_companies')->where('id',$req->id)->update($data);
+            return redirect("admin-company-list")->with('success','New record updated successfully.');
         }
-        else{
-            if(DB::table('tbl_rates')->insert($data)){
-                return redirect("admin-registration-list")->with('success','New record added successfully.');
-            }
+        DB::table('tbl_companies')->insert($data);
+        return redirect("admin-company-list")->with('success','New record added successfully.');
+    }
+    public function editCompany($id){
+        $query = DB::table('tbl_companies')->where('id',$id)->first();
+        $data['company']=$query;
+        return view('backend.edit-company',$data);  
+    }
+    public function addPackage($id){
+        return view("backend.add-package");
+    }
+    public function editPackage(){
+        $package_id = request('package_id');
+        $query = DB::table('rate_with_detectible_amt')->where('id',$package_id)->first();
+        $data['package'] = $query;
+        return view("backend.edit-package",$data);
+    }
+    public function addPackagePost(Request $req){
+        $validation['c_id'] = "required";
+        $validation['start_age'] = "required";
+        $validation['end_age'] = "required";
+        $validation['rate'] = "required";
+        $validation['detectible'] = "required";
+        $validation['coverage'] = "required";
+        $validation['medical'] = "required";
+        $validation['multiplecation_factor'] = "required";
+        $req->validate($validation);
+        $data['c_id'] = $req->c_id;
+        $data['start_age'] = $req->start_age;
+        $data['end_age'] = $req->end_age;
+        $data['rate'] = $req->rate;
+        $data['detectible'] = $req->detectible;
+        $data['coverage'] = $req->coverage;
+        $data['medical'] = $req->medical;
+        $data['multiplecation_factor'] = $req->multiplecation_factor;
+        if($req->package_id){
+            DB::table('rate_with_detectible_amt')->where('id',$req->package_id)->update($data);
+            return redirect("admin-package-list/".$req->c_id)->with('success','New record updated successfully.');    
         }
-        return redirect()->back()->with('error','New record something wrong.');
+        DB::table('rate_with_detectible_amt')->insert($data);
+        return redirect("admin-package-list/".$req->c_id)->with('success','New record added successfully.');
+    }
+    public function updateCompanyDetail(){
+        $company_id = request('company_id');
+        return view('backend.update-company-detail');
+    }
+    public function updateCompanyDetailPost(request $req){
+        $c_id = $req->c_id;
+        $data['covid_19'] = $req->covid_19;
+        $data['ambulance'] = $req->ambulance;
+        $data['deductible_per_claim_or_per_policy'] = $req->deductible_per_claim_or_per_policy;
+        $data['2500_disappearing_deductible'] = $req->twentty_five_hundred_disappearing_deductible;
+        $data['hospitalization_related_to_emergency'] = $req->hospitalization_related_to_emergency;
+        $data['services_of_a_physician_a_surgeon'] = $req->services_of_a_physician_a_surgeon;
+        $data['medical_care_related_to_emergencies'] = $req->medical_care_related_to_emergencies;
+        $data['walk_in_clinic_visits'] = $req->walk_in_clinic_visits;
+        $data['follow_up_treatment'] = $req->follow_up_treatment;
+        $data['coverage_forlab_diagnostics_x_ray'] = $req->coverage_forlab_diagnostics_x_ray;
+        $data['prescriptions_related_to_emergencies'] = $req->prescriptions_related_to_emergencies;
+        $data['dental_pain_relief'] = $req->dental_pain_relief;
+        $data['dental_repair_related_to_emergencies'] = $req->dental_repair_related_to_emergencies;
+        $data['assistance_center24_hour'] = $req->assistance_center24_hour;
+        $data['ambulance_transportation'] = $req->ambulance_transportation;
+        $data['home_return_related_to_medical_emergencies'] = $req->home_return_related_to_medical_emergencies;
+        $data['repatriation_of_remains'] = $req->repatriation_of_remains;
+        $data['expenses_forcremation_burial'] = $req->expenses_forcremation_burial;
+        $data['pre_existing_medical_conditions_stability_required'] = $req->pre_existing_medical_conditions_stability_required;
+        $data['expenses_forprivate_duty_nurse_medical_attendant'] = $req->expenses_forprivate_duty_nurse_medical_attendant;
+        $data['medical_appliancesrental_purchase'] = $req->medical_appliancesrental_purchase;
+        $data['side_trips_benefit_with_in_canada_and_outside_of_canada'] = $req->side_trips_benefit_with_in_canada_and_outside_of_canada;
+        $data['enhanced_benefits'] = $req->enhanced_benefits;
+        $data['emergency_serviceschiropractor_chiropodist_physiotherapist_osteo'] = $req->emergency_serviceschiropractor_chiropodist_physiotherapist_osteo;
+        $data['accidental_death'] = $req->accidental_death;
+        $data['double_dismemberment'] = $req->double_dismemberment;
+        $data['single_dismemberment'] = $req->single_dismemberment;
+        $data['bedside_companionaccommodation_transportation'] = $req->bedside_companionaccommodation_transportation;
+        $data['hospital_expensesmeals_accommodation_accommodation_out_of_pocket'] = $req->hospital_expensesmeals_accommodation_accommodation_out_of_pocket;
+        $data['maternity_benefits_delivery_coverage'] = $req->maternity_benefits_delivery_coverage;
+        $data['pregnancy_coverage_related_to_complications'] = $req->pregnancy_coverage_related_to_complications;
+        $data['physical_examination_non_emergency'] = $req->physical_examination_non_emergency;
+        $data['eye_examination_non_emergency'] = $req->eye_examination_non_emergency;
+        $data['vaccines_non_emergency'] = $req->vaccines_non_emergency;
+        $data['coverage_forchild_care_exp_escort_expenses'] = $req->coverage_forchild_care_exp_escort_expenses;
+        $data['coverage_forpsychiatric_psychological'] = $req->coverage_forpsychiatric_psychological;
+        $data['return_of_a_vehicle'] = $req->return_of_a_vehicle;
+        $data['sports_injuries'] = $req->sports_injuries;
+        $data['accidentsflight_travel'] = $req->accidentsflight_travel;
+        $data['trip_break_benefit'] = $req->trip_break_benefit;
+        $data['underwritten_by'] = $req->underwritten_by;
+        $updateData['company_detail'] = arrayToEncode($data);
+        DB::table('tbl_companies')->where('id',$c_id)->update($updateData);
+        return redirect()->back()->with('success','New record updated successfully.');
 
     }
-    public function editRate($id){
-        $data['title'] = "Edit Rate";
-        $data['record'] = findRate($id);
-        return view('backend.edit-rate',$data);    
-    }
-    public function ratePriceGet(Request $req){
-        
-        $priceList = companyWiseAggregatePrice($req->company);
-        $ageList = companyWiseAgeGroup($req->company);
-        $detectList = companyWiseDetectible($req->company);
-        
-
-        $ageOptions = "";
-        $priceOptions = "";        
-        $detectOptions = "";        
-        foreach ($priceList as $price) {
-            $priceOptions .= "<option value='".$price->id."'>".$price->price."</option>";
-        }
-        
-        foreach ($ageList as $age) {
-            $ageOptions .= "<option value='".$age->id."'>".$age->start_age.'-'.$age->end_age."</option>";
-        }
-        
-        foreach ($detectList as $detect) {
-            $detectOptions .= "<option value='".$detect->id."'>".$detect->deductible_amt."</option>";
-        }
-        
-        $data = ['price' => $priceOptions, 'age' => $ageOptions,'detect'=>$detectOptions];
-        return response()->json($data);    
-    }
-    public function viewRate($id){
-        $data['record'] = findRate($id);
-        return view('backend.view-rate',$data); 
+    public function deletePackage(){
+        $package_id = request('package_id');
+        $query = DB::table('rate_with_detectible_amt')->where('id',$package_id)->delete();
+        return redirect()->back()->with('success','New record delete successfully.');
     }
     public function logout()
     {

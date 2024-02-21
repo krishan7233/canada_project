@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Visa</title>
+	<title>Super Visa Insurance Login</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="{{asset('auth/css/bootstrap.min.css')}}">
@@ -32,7 +32,7 @@
 				<div class="col-xl-6 col-lg-7 col-sm-12 col-12 fxt-bg-color">
 					<div class="fxt-content">
 						<div class="fxt-header">
-							<p>Login into your pages account</p>
+							<p>Super Visa Insurance</p>
 							<div class="alert alert-success alert-dismissible" id="success" style="display:none;">
 	  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
 	</div>
@@ -45,7 +45,7 @@
 							@csrf
 								<div class="form-group">
 									<div class="fxt-transformY-50 fxt-transition-delay-1">
-									<input class="form-control" type="text" placeholder="Enter email" name="email" id="email" value="{{ old('email') }}">
+									<input class="form-control" type="text" placeholder="Enter Email" name="email" id="email" value="{{ old('email') }}">
 									</div>
 
 								</div>
@@ -60,7 +60,7 @@
 									<div class="fxt-transformY-50 fxt-transition-delay-3">
 										<div class="fxt-checkbox-area">
 											<div class="checkbox">
-												<input id="checkbox1" type="checkbox">
+												<input id="checkbox1" type="checkbox" checked>
 												<label for="checkbox1">Keep me logged in</label>
 											</div>
 											<a href="#" class="switcher-text">Forgot Password</a>

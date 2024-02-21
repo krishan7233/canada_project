@@ -212,10 +212,9 @@
 
 
 
-/* /* .otheramt {
+.otheramt {
   display: none;
-} */
- 
+}
 
 .otheramt-toggle {
     color: #1bbc9b;

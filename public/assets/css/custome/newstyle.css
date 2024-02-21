@@ -1,0 +1,1238 @@
+.quote {
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    display: inherit;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.quote-left p span {
+    background: #000000;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0px 0 0 7px;
+}
+
+
+
+
+
+
+.number1 {
+    background: pink;
+    color: #000;   
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+	display: inline-block;
+	margin:0 5px 0 0;
+}	
+
+.number22 {
+    background: #fff9c4;
+    color: #000;   
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+	display: inline-block;
+	margin:0 5px 0 0;
+}	
+
+.pnkBg{
+	background:pink !important;
+}
+
+.LightYellowBg{
+	background: #fff9c4 !important;
+}
+
+.annuallly_amount {
+    font-weight: 600;
+	color: #000;
+	font-size: 1.375rem !important;
+}
+
+.price-section div{
+	font-size:0.8rem !important;
+	color:#485566 !important
+}
+
+.price-section p {
+    font-size: 0.8rem !important;
+    color: #485566 !important;
+    border-top: #ccc solid 1px;
+}
+
+.quote-right .price-section h3 span {
+    font-size: 0.8rem;
+    font-weight: 400;
+	color:#485566 !important;
+}
+
+span.last_digit {
+    color: #263238;
+    font-weight: 600;
+}
+
+.compaire {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.btn-section .buy-now {
+    background: #d91203;
+    display: inline-block;
+}
+
+.plan-details {
+    background: #000;
+    display: inline-block;
+}
+
+.get-email a {
+    background: #000000;
+}
+
+
+.compareData{
+    color: #f4f4f4;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    padding: 8px 7px !important;
+    position: relative;
+    z-index: 1;
+}
+
+
+.super_visa_couple_compare_data {
+	 color: #f4f4f4;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    padding: 8px 7px !important;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.visitor_visa_couple_compare_data{
+	color: #f4f4f4;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    padding: 8px 7px !important;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+.plan-details-page .left .call-btn {
+    background: #d91203;
+}
+
+
+.plan-details-page .right input[type=submit] {
+    background: #d91203;
+}
+
+.plan-details-page .left p i {
+    background: #000000;
+}
+
+.emailData .SendBtn {
+    background: #000000;
+}
+
+.CloseBtn i {
+    background: #000000;
+}
+
+.hidden-plan-details .section3 .benifit-sumry {
+    background: #d91203;
+}
+
+.hidden-plan-details .section3 .srt-app {
+    background: #000000;
+}
+
+
+
+
+
+
+
+.CounterSection .conterBox h3 {
+    padding: 0px 0 8px 0;
+    margin: 0px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #cd1204;
+}
+
+.middle-contact {
+	background:#da1203;
+	padding:40px 0;
+}
+
+.main-header .navbar {
+    background: #18191b;
+    padding: 0px 0 0px 0;
+}
+
+
+.mega-menu {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+	gap: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 14px;
+    color: #ffffff;
+    transition: all .3s ease-in-out;
+    padding: 30px 20px;
+}
+
+.dropdown-menu a{
+    font-size: 14px;
+
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    margin-top: 0px;
+    background: #fff;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    /*overflow: hidden;*/
+    padding: 0px;
+    transition: all .1s ease-in-out;
+    border: 1px solid #b7cdc8;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu:before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 60px;
+    transform: translateX(-50%);
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/dropdown-triangle.svg);
+    width: 30px;
+    height: 18px;
+    background-size: 30px 18px;
+    background-repeat: no-repeat;
+    z-index: 9000 !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #666666;
+    white-space: nowrap;
+    background-color: #ffffff;
+}
+
+.dropdown-item span img {
+    width: 1.5rem;
+    margin: 0 5px 0 0px;
+}
+
+.VieAll {
+    display: block;
+    grid-column: 1/span 2;
+    padding: 15px 10px;
+	
+}
+
+.VieAll a{
+	font-size:14px;
+	color:#666666;
+	font-weight: 400;
+}
+
+.VieAll a i{
+	font-size:16px;
+}
+
+.dropdown-menu .dropdown-item{
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    clear: both;
+    font-weight: 400;
+    color: #666666;
+    text-align: left;
+    white-space: nowrap;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+
+/*.dropdown-menu .dropdown-item::before{
+    content: '-';
+    font-weight: bold;
+    color: #ffffff;
+    padding-right: 5px;
+    margin-left: -5px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+.dropdown-menu .dropdown-item:hover::before{
+    content: '-';
+    font-weight: bold;
+    color: #ffffff;
+    padding-right: 10px;
+    margin-left: 3px;
+    opacity: 1;
+}*/
+
+
+.middle-contact h2{
+	color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+	padding:0px;
+	margin:0px;
+	text-align: left;
+	line-height: 37px;
+}
+
+.buyNow {
+    background: #fff;
+    color: #da1203;
+    padding: 10px 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.middle-contact .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+}	
+
+
+
+.CounterSection {
+	padding:80px 0;
+	    background: #f7f7f7;
+}
+
+.hero-image {
+    background: #f7f7f7;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.make-us-section .box {
+    border: #efefef solid 1px;
+    border-radius: 10px;
+    background: #f7f7f7;
+    padding: 30px 17px 30px 17px;
+    min-height: 475px;
+    transition: all .4s ease-in-out;
+    text-align: center;
+}
+
+.make-us-section .box span {
+    background: #fff;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    line-height: 90px;
+    margin-bottom: 20px;
+	box-shadow: #e5e5e5 0px 0px 30px;
+}
+
+
+
+.make-us-section .box:hover{
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
+}
+
+.make-us-section .box:hover h3{
+	color:#d91203 !important;
+}
+
+.faq-section {
+	padding:80px 0;
+	background:#f7f7f7;
+}
+
+.inner-faq {
+	background:#fff;
+}
+
+.make-us-section .title-center h2 {
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.make-us-section .title-center h2 span {
+    color: #d91203;
+    font-weight: 700;
+}
+
+.about-section .title-center h2 {
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.about-section .title-center h2 span{
+	color:#da1203;
+	font-weight: 700;
+}
+
+.partner-section .title-center h2 {
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.partner-section .title-center h2 span {
+    color: #d91203;
+	font-weight: 700;
+}
+
+.CounterSection h4 {
+    padding: 0px 0 40px 0;
+    margin: 0px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+
+.CounterSection h4 span{
+	 color: #d91203;
+	font-weight: 700;
+}
+
+
+.faq-section .title-center h2 {
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.faq-section .title-center h2 span {
+    color: #d91203;
+	 font-weight: 700;
+}
+
+.testimonials .title-center h2 {
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+.testimonials .title-center h2 span {
+    color: #d91203;
+	 font-weight: 700;
+}
+
+.blog-section .title-center h2 {
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.blog-section .title-center h2 span {
+    color: #d91203;
+	font-weight: 700;
+}
+
+.card-header h2 button {
+    color: #000;
+    text-transform: initial;
+    letter-spacing: initial;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+    background: #e6e6e6;
+}
+
+.card-body {
+    background-color: #f9f9f9;
+}
+
+.Visa-descrption {
+	padding: 80px 0;
+    background: #f7f7f7;
+}
+
+.Visa-descrption h2 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #000;
+    padding: 0px 0 10px 0;
+    margin: 0px;
+}
+
+.Visa-descrption p{
+	padding:0px 0 20px 0;
+	margin:0px;
+	line-height:32px;
+	
+}
+
+
+.inner-page-h {
+	background:#fff;
+	padding:80px 0;
+}
+
+.inner-page-h .poins {
+    margin-top: 0px;
+}
+
+.inner-page-h .numbers h2 {
+    color: #da1203;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+}
+
+.cookies-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #363535f2;
+        color: white;
+        padding: 10px;
+        text-align: left;
+		    z-index: 11;
+}
+#accept-cookies {
+    background-color: #d91203;
+    color: white;
+    border: none;
+    padding: 12px 20px !important;
+    cursor: pointer;
+    letter-spacing: 0;
+}
+
+.cookies-model #accept-cookies {
+    background-color: #d91203;
+    color: white;
+    border: none;
+    padding: 12px 20px !important;
+    cursor: pointer;
+    letter-spacing: 0;
+    margin: 20px 0 0 0;
+    float: right;
+}
+
+
+
+.cookies-popup a{
+		color:#fff;
+		text-decoration:underline;
+		padding:0 10px 0 0;
+	}
+
+    .popup-content {
+        
+        margin: 0 auto;
+    }
+	
+	.popup-content p {
+    color: #fff;
+    line-height: 23px;
+    font-size: 14px;
+}
+
+.cookies-model h5 {
+    font-size: 18px;
+    color: #000;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+}
+
+#cookies-text {
+    display: none;
+}
+
+.btn-container button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #000;
+    padding: 0 0 0 0;
+    margin: 15px 0 8px 0;
+    text-decoration: underline;
+}
+
+.btn-container button:focus {
+    outline: none;
+}
+
+.cookies-model p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+}
+
+.cookies-model .card-header h2:hover {
+    padding-left: 0;
+}
+
+.cookies-model .accordion > .card .card-header:hover {
+    background-color: #fff;
+}
+
+.cookies-model .card-header h2 {
+    padding-bottom: 0px;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+
+.cookies-model .Enable {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    color: #000;
+    z-index: 1;
+    font-size: 15px;
+}
+
+.cookies-model .card-body {
+    background-color: #ffffff;
+    padding: 7px 10px 7px 10px;
+}
+
+.cookies-model .card-header h2 button {
+    color: #000;
+    text-transform: initial;
+    letter-spacing: initial;
+    font-weight: 500;
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+    background: #e6e6e6;
+    padding: 12px 20px !important;
+}
+
+.cookies-model .card {
+    margin-bottom: 4px;
+}
+
+.cookies-model .accordion{
+	    margin-top: 15px;
+}
+
+.cookies-model .modal-header {
+    padding: 1rem 1rem 0rem 1rem;
+    border-bottom: 0;
+}
+
+.compare-table {
+    padding: 60px 35px 60px 35px;
+}
+
+.text_position {
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    min-height: 50px;
+	    line-height: 18px;
+}
+
+
+.text_position {
+    text-align: left !important;
+    padding: 5px;
+}
+
+
+.border_div3 {
+    min-height: 51px;
+}
+
+.border_div2 {
+    min-height: 50px;
+}
+
+.border_div1 {
+    min-height: 50px;
+}
+
+.border_div6 {
+    min-height: 50px;
+	    text-align: center;
+}
+
+.navbar-light .navbar-nav .show > .nav-link {
+	color:#f23750 !important;
+}
+
+.bg-dark {
+    justify-content: center;
+}
+
+.Card_Back {
+    font-size: 18px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border: 1px solid #b7cdc8;
+    border-radius: 4px;
+    padding: 1rem 1rem 1rem 5rem;
+    width: 100%;
+    line-height: 1.45;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: right;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100px;
+    position: relative;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.Card_Back:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background-color: #004751;
+    transition: all .15s ease-out;
+}
+
+.Card_Back:hover:before {
+    width: 5.5rem;
+}
+
+
+
+.Card_Back a{
+	color:#000;
+}
+
+.Card_Back .CardIcon{
+	
+}
+
+
+
+.CardIcon {
+    font-family: icomoon;
+    position: absolute;
+    top: 50%;
+    left: 1.7017rem;
+    display: block;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.Card_Back h6 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.Card_Back h6 i {
+    font-size: 24px;
+    margin: 0px 0 0 4px;
+}
+
+/*Icon Section start*/
+
+.CardExtend .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/super-visa-icon.png);
+}
+
+.CardExtend:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/super-visa-icon-w.png);
+}
+
+.CardExtend:before{
+	background-color: #da1203;
+}
+
+/*Icon Section End*/
+
+
+
+/*Icon Section start*/
+
+.CardExtend_visit-to-ca .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/visiter-to-canada-icon.png);
+}
+
+.CardExtend_visit-to-ca:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/visiter-to-canada-icon-w.png);
+}
+
+.CardExtend_visit-to-ca:before{
+	background-color: #008347;
+}
+
+/*Icon Section End*/
+
+
+
+/*Icon Section start*/
+
+.CardExtend_canadian-travel .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/visiter-to-canada-icon.png);
+}
+
+.CardExtend_canadian-travel:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/visiter-to-canada-icon-w.png);
+}
+
+.CardExtend_canadian-travel:before{
+	background-color: #faa54f;
+}
+
+/*Icon Section End*/
+
+
+
+/*Icon Section start*/
+
+.CardExtend_Home-Auto-ins .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/HomeAuto-icon.png);
+}
+
+.CardExtend_Home-Auto-ins:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/HomeAuto-icon-w.png);
+}
+
+.CardExtend_Home-Auto-ins:before{
+	background-color: #cca9cf;
+}
+
+/*Icon Section End*/
+
+
+/*Icon Section start*/
+
+.CardExtend_Commercial-ins .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/Commercial-icon.png);
+}
+
+.CardExtend_Commercial-ins:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/Commercial-icon-w.png);
+}
+
+.CardExtend_Commercial-ins:before{
+	background-color: #b7cdc8;
+}
+
+/*Icon Section End*/
+
+
+/*Icon Section start*/
+
+.CardExtend_life_ins .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/Life-ins-icon.png);
+}
+
+.CardExtend_life_ins:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/Life-ins-icon-w.png);
+}
+
+.CardExtend_life_ins:before{
+	background-color: #64b6cf;
+}
+
+/*Icon Section End*/
+
+
+/*Icon Section start*/
+
+.CardExtend_Disability-ins .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/Disability-ins-icon.png);
+}
+
+.CardExtend_Disability-ins:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/Disability-ins-icon-w.png);
+}
+
+.CardExtend_Disability-ins:before{
+	background-color: #5e5357;
+}
+
+/*Icon Section End*/
+
+
+
+/*Icon Section start*/
+
+.CardExtend_canadian-travel .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/travel-icon.png);
+}
+
+.CardExtend_canadian-travel:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/travel-icon-w.png);
+}
+
+.CardExtend_canadian-travel:before{
+	background-color: #7c96d7;
+}
+
+/*Icon Section End*/
+
+
+/*Icon Section start*/
+
+.CardExtend_Critical-Illness .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/critical-Illness-icon.png);
+}
+
+.CardExtend_Critical-Illness:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/critical-Illness-icon-w.png);
+}
+
+.CardExtend_Critical-Illness:before{
+	background-color: #78daaa;
+}
+
+/*Icon Section End*/
+
+
+/*Icon Section start*/
+
+.CardExtend_Int-student .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/int-student-icon.png);
+}
+
+.CardExtend_Int-student:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/int-student-icon-w.png);
+}
+
+.CardExtend_Int-student:before{
+	background-color: #fe646f;
+}
+
+/*Icon Section End*/
+
+
+/*Icon Section start*/
+
+.CardExtend_Group-ins .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/group-icon.png);
+}
+
+.CardExtend_Group-ins:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/group-icon-w.png);
+}
+
+.CardExtend_Group-ins:before{
+	background-color: #78b949;
+}
+
+/*Icon Section End*/
+
+/*Icon Section start*/
+
+.CardExtend_Dental-ins .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/dental-icon.png);
+}
+
+.CardExtend_Dental-ins:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/dental-icon-w.png);
+}
+
+.CardExtend_Dental-ins:before{
+	background-color: #2ab7c6;
+}
+
+/*Icon Section End*/
+
+
+/*Icon Section start*/
+
+.CardExtend_Auto-ins .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/auto-icon.png);
+}
+
+.CardExtend_Auto-ins:hover .CardIcon {
+    background-image: url(https://greenberrysignature.co.in/policymarket/public/assets/images/auto-icon-w.png);
+}
+
+.CardExtend_Auto-ins:before{
+	background-color: #ed5100;
+}
+
+/*Icon Section End*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mob-slide {
+	display:none;
+}
+
+	
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+.about-section p {
+    font-size: 14px;
+}
+
+.make-us-section .box p {
+    font-size: 14px;
+}
+
+.make-us-section .box {
+    min-height: auto;
+    margin-bottom: 30px;
+}
+
+.about-section .title-center h2, .make-us-section .title-center h2, .about-founder .title-center h2, .partner-section .title-center h2, .CounterSection h4, .faq-section .title-center h2, .testimonials .title-center h2, .blog-section .title-center h2 {
+    font-size: 24px;
+}
+
+.testimonials {
+    padding: 80px 0 !important;
+}
+
+
+.VieAll {
+    display: block;
+    grid-column: 1/span 2;
+    padding: 15px 20px;
+}
+
+	.desk-slide {
+	display:none !important;
+}
+
+.mob-slide {
+    display: block;
+    width: 100%;
+    margin-top: 175px;
+}
+
+.main-slider .carousel-caption {
+    position: absolute;
+    right: 0;
+    bottom: inherit;
+    left: 0%;
+    z-index: 10;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    top: 0;
+}
+
+.hero-text h1 {
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("https://greenberrysignature.co.in/policymarket/public/assets/images/menu-mobile.png") !important;
+	background-repeat:no-repeat;
+	height: 20px;
+}
+
+.navbar-light .navbar-toggler {
+	    outline: none;
+		    top: 14px;
+}
+
+.CounterSection .conterBox {
+    justify-content: flex-start;
+    gap: 30px;
+    min-height: 100px;
+}
+
+
+.middle-contact h2 {
+    font-size: 26px;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+.mega-menu {
+    display: block;
+    height: 350px;
+    overflow: scroll;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu:before {
+    display:none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 15px;
+    color: #ffffff;
+    transition: all .3s ease-in-out;
+    padding: 15px 20px;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 15px 20px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    border-radius: 0;
+}
+
+.form-field-row {
+    flex-wrap: wrap;
+}
+
+.quote-box {
+    flex-wrap: wrap;
+}
+
+.quote-right .logo-section, .quote-right .price-section {
+	width:50%;
+}
+
+.quote-right .btn-section {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.quote-right .compaire {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.quote-right .compareData {
+    margin-top: 0px;
+	font-size:14px;
+}
+
+.plan-details {
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+.btn-section .buy-now {
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+.compare-table .col-xs-4 {
+    width: 33%;
+} 
+
+.compare-table {
+    padding: 60px 5px 60px 8px;
+}
+
+.compare-table .buy-now {
+    font-size: 13px;
+    padding: 8px 10px;
+}
+
+
+.text_position {
+    min-height: 90px;
+}
+
+.border_div3 {
+    min-height: 90px;
+}
+
+.border_div2 {
+    min-height: 90px;
+}
+
+.border_div1 {
+    min-height: 90px;
+}
+
+.border_div6 {
+    min-height: 90px;
+}
+
+.border_div5 {
+	min-height:90px;
+}
+
+
+
+
+
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

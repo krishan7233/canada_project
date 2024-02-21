@@ -23,7 +23,7 @@
               <input type="hidden" name="start_date" class="start_date" value="{{$requestData['start_date']}}">
               <input type="hidden" name="end_date" class="end_date" value="{{$requestData['end_date']}}">
               <input type="hidden" name="no_of_days" class="no_of_days" value="{{$requestData['no_of_days']}}">
-            <div class="coverage"> <span>Deductible</span>
+            <div class="coverage"> <span class="pnkBg">Deductible</span>
               <select class="form-control deductible_amt">
                 <option value="0" {{ $requestData['deductible'] == 0 ? 'selected' : '' }}>0</option>
                 <option value="75" {{ $requestData['deductible'] == 75 ? 'selected' : '' }}>75</option>
@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="form-field-row">
-            <div class="coverage"> <span>Coverage</span>
+            <div class="coverage"> <span class="LightYellowBg">Coverage</span>
               <select class="form-control  coverage_amt">
                 <option value="10000" {{ $requestData['coverage_amt'] == 10000 ? 'selected' : '' }}>10,000</option>
                 <option value="25000" {{ $requestData['coverage_amt'] == 25000 ? 'selected' : '' }}>25,000</option>
@@ -81,26 +81,15 @@
             <div> <span class="dollar_sign">$</span>
               <span class="annuallly_amount">{{$annually_amount[0]}}</span>.<span class="last_digit">{{$annually_amount[1]}}</span>
             </div>
-              <?php  if(perMonthCheck($ratePackage['c_id'])==1){
-                if($ratePackage['c_id']==10){
-                  ?>
-                  <!-- <h3><span><strong>$ {{number_format(($ratePackage['final_result']/12)+10,2)}}</strong>/month</span></h3> -->
-
-                  <?php
-                }
-                else{
-                ?>
-                <!-- <h3><span><strong>$ {{number_format(($ratePackage['final_result']/12),2)}}</strong>/month</span></h3> -->
-                <?php 
-                }
-              }?>
               <h3><span>Deductible <strong>{{number_format($ratePackage['detectible'])}}  </strong> {{policyType($ratePackage['c_id'])}} 
               
               </span></h3>
             </div>
-            <div class="btn-section"> <a href="{{url('visitor-single-plan?visitor_type='.request('visitor_type').'&visa_type='.request('visa_type').'&deductible='.request('deductible').'&date_of_birth='.request('date_of_birth').'&age='.request('age').'&start_date='.request('start_date').'&end_date='.request('end_date').'&no_of_days='.request('no_of_days').'&coverage_amt='.request('coverage_amt').'&pre_exit='.request('pre_exit').'&buyer_id='.$ratePackage['id'].'')}}" target="_blank" class="buy-now">BUY NOW</a> 
-            <a href="#" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails{{$ratePackage['id']}}({{$ratePackage['id']}})">PLAN DETAILS</a>
-            <button class="btn btn-primary visitor_visa_compareData compareData" id="compare_btn_{{$ratePackage['id']}}" style="display:none;">COMPARE</button>
+            <div class="btn-section"> 
+            <button class="btn btn-primary visitor_visa_compareData compareData" id="compare_btn_{{$ratePackage['id']}}" style="display:none;">Compare</button>
+            <a href="{{url('visitor-single-plan?visitor_type='.request('visitor_type').'&visa_type='.request('visa_type').'&deductible='.request('deductible').'&date_of_birth='.request('date_of_birth').'&age='.request('age').'&start_date='.request('start_date').'&end_date='.request('end_date').'&no_of_days='.request('no_of_days').'&coverage_amt='.request('coverage_amt').'&pre_exit='.request('pre_exit').'&buyer_id='.$ratePackage['id'].'')}}" target="_blank" class="buy-now">Buy Now</a> 
+            <a href="javascript:void(0)" class="plan-details toggle togglePlanDetails" id="toggle" onclick="togglePlanDetails{{$ratePackage['id']}}({{$ratePackage['id']}})">Plan Details</a>
+            
           <div class="compaire">
                 <div class="left">
                   <input type="checkbox" class="form-check-input visitor_single_compare compare" id="visitor_single_compare" value="{{$ratePackage['id']}}">

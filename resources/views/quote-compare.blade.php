@@ -47,14 +47,14 @@
   
 </style>
 <div class="compare-table">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-10 m-auto">
+			<div class="col-lg-12 m-auto">
 			<div class="backhome">
 				<a href="#"><i class="fa fa-arrow-left"></i> BACK TO HOME</a>
 			</div>
       <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3 col-xs-4">
               <div class="row">
                 <div class="col-sm-12 border_div1"  ></div>
                 <div class="col-sm-12 border_div2" ></div>
@@ -108,7 +108,7 @@
             $compare_data = companyDetail($compare['c_id']);
             $annually_amount = valueNumberFormate($compare['final_result']);
             ?>
-            <div class="col-sm-3">
+            <div class="col-sm-2 col-xs-4">
               <div class="row">
                 <div class="col-sm-12 border_div5" >
                   <img src="{{companyPhoto($compare['c_id'])}}" class="img-fluid" alt="">
@@ -251,6 +251,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 
 
